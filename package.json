@@ -34,7 +34,6 @@
     "swc-loader": "^0.2.3",
     "vite": "^4.3.9",
     "vite-plugin-pwa": "^0.16.3",
-    "workbox-window": "^7.0.0",
     "workbox-background-sync": "7.0.0",
     "workbox-broadcast-update": "7.0.0",
     "workbox-cacheable-response": "7.0.0",
@@ -48,6 +47,7 @@
     "workbox-routing": "7.0.0",
     "workbox-strategies": "7.0.0",
     "workbox-streams": "7.0.0",
-    "workbox-sw": "7.0.0"
+    "workbox-sw": "7.0.0",
+    "workbox-window": "^7.0.0"
   }
 }
