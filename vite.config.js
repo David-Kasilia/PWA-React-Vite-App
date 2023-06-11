@@ -10,8 +10,12 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: "none",
+      cache: {
+        staticAssets: true,
+      },
       workbox: {
         runtimeCaching: [...cachingStrategies],
+        cleanupOutdatedCaches: true,
       },
       injectRegister: false,
       injectManifest: false,
@@ -40,6 +44,7 @@ export default defineConfig({
     },
   },
   server: {
+    registerServiceWorker: true,
     middleware: [
       (req, res, next) => {
         if (req.url.endsWith(".js") || req.url.endsWith(".css")) {
