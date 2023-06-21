@@ -60,6 +60,6 @@
   "display": "standalone",
   "orientation": "portrait",
   "lang": "en",
-  "scope": "/",
-  "start_url": "/"
+  "start_url": "/",
+  "scope": "/dist/"
 }

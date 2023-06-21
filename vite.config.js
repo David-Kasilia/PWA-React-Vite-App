@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      registerType: "none",
+      registerType: "autoUpdate",
       cache: {
         staticAssets: true,
       },
@@ -17,11 +17,11 @@ export default defineConfig({
         runtimeCaching: [...cachingStrategies],
         cleanupOutdatedCaches: true,
       },
-      injectRegister: false,
+      injectRegister: true,
       injectManifest: false,
       customInjectManifestGenerator: async (manifestEntries) => {
         const { count, size } = await generateSW({
-          swDest: "dist/service-worker.js",
+          swDest: "dist/sw.js",
           globDirectory: "dist",
           globPatterns: ["**/*.{html,js,css,json}"],
           skipWaiting: true,
